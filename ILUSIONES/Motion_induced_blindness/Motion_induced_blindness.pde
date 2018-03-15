@@ -1,5 +1,5 @@
 
-float rot =360.0;
+float rot =0.0;
 String plus;
 void setup() {
   size(700, 600);  
@@ -16,14 +16,12 @@ void draw(){
   draw_cross();
   
   
-  fill(0,255,0);
-  ellipse(0, 0, 13, 13);
   draw_yellow_dots();
 }
 
 void draw_yellow_dots(){
-  int coo=90;
-  int size=8;
+  int coo=100;
+  int size=10;
   fill(255,255,0);
   ellipse(coo, -coo, size, size);
   ellipse(-coo, -coo, size, size);
@@ -34,8 +32,8 @@ void draw_yellow_dots(){
 
 void draw_cross(){
   pushMatrix();    
-    rot-=4;
-    if (rot < 0) rot = 360;
+    rot+=3;
+    if (rot > 360) rot = 0;
     rotate(radians(rot));
     
     fill(10,0,255);
@@ -47,6 +45,10 @@ void draw_cross(){
     for(int i=0; i<11;i++){
       text(plus, 0, rows);
       rows+=60;
+    }
+    if (rot>100){
+      fill(0,255,0);
+      ellipse(0, 0, 8, 8);
     }
   popMatrix();
   rotate(0);
