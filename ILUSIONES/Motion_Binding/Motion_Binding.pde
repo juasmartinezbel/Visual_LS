@@ -9,7 +9,7 @@ boolean diamonds=true;
 int top=40;
 int move1 = 0;
 boolean increase1=true;
-int move2 = 15;
+int move2 = 20;
 boolean increase2=false;
 
 void setup(){

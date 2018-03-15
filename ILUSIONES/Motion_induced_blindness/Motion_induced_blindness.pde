@@ -22,7 +22,7 @@ void draw(){
 }
 
 void draw_yellow_dots(){
-  int coo=80;
+  int coo=90;
   int size=8;
   fill(255,255,0);
   ellipse(coo, -coo, size, size);
@@ -34,7 +34,7 @@ void draw_yellow_dots(){
 
 void draw_cross(){
   pushMatrix();    
-    rot-=3;
+    rot-=4;
     if (rot < 0) rot = 360;
     rotate(radians(rot));
     
